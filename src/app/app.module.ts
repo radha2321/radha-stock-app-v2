@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SentimentComponent } from './components/sentiment/sentiment.component';
-import { StockInfoService } from './services/stock-info.service';
-import { StockTrackerComponent } from './components/stock-info/stock-info.component';
+import { StockTrackerComponent } from './components/stock-tracker/stock-tracker.component';
+import { StockTrackerService } from './services/stock-tracker.service';
 
 @NgModule({
   imports: [
@@ -17,7 +17,7 @@ import { StockTrackerComponent } from './components/stock-info/stock-info.compon
     AppRoutingModule,
   ],
   declarations: [AppComponent, StockTrackerComponent, SentimentComponent],
-  providers: [StockInfoService],
+  providers: [StockTrackerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

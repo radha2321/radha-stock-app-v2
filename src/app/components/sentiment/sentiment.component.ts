@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { StockTrackerService } from '../../services/stock-tracker.service';
 import { months } from '../../constants/months-constant';
 import { Sentiment } from '../../models/sentiment';
-import { StockInfoService } from '../../services/stock-info.service';
 
 @Component({
   selector: 'app-sentiment',
@@ -19,7 +19,7 @@ export class SentimentComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription();
 
   constructor(
-    private readonly stockService: StockInfoService,
+    private readonly stockService: StockTrackerService,
     private readonly route: ActivatedRoute
   ) {}
 

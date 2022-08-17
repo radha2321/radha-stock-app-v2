@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SentimentComponent } from './components/sentiment/sentiment.component';
-import { StockTrackerComponent } from './components/stock-info/stock-info.component';
+import { StockTrackerComponent } from './components/stock-tracker/stock-tracker.component';
 
 const stockInfoRoutes: Routes = [
   { path: '', component: StockTrackerComponent, pathMatch: 'full' },

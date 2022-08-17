@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class StockInfoService {
+export class StockTrackerService {
   apiUrl: string = 'https://finnhub.io/api/v1/';
   constructor(private http: HttpClient) {}
 

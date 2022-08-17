@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { StockTrackerService } from '../../services/stock-tracker.service';
 import { StockInfo, Stocks } from '../../models/stock';
-import { StockInfoService } from '../../services/stock-info.service';
 
 @Component({
   selector: 'app-stock-tracker',
@@ -16,7 +16,7 @@ export class StockTrackerComponent implements OnInit, OnDestroy {
   quoteData = [];
   subscription: Subscription = new Subscription();
 
-  constructor(private readonly stockService: StockInfoService) {}
+  constructor(private readonly stockService: StockTrackerService) {}
 
   ngOnInit(): void {
     this.createStockTracerForm();
